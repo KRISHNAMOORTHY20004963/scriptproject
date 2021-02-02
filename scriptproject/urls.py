@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from mathapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('volume/',views.mathadd,name='volume'),
+    path('area/',views.trainglearea,name='area')
 ]
